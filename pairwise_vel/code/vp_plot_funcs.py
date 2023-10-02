@@ -160,10 +160,20 @@ def initialize_vp_plot():
     plt.axhline(y=0., linestyle="-", color="k")
 
 
-def initialize_paper_plot():
+def initialize_paper_plot(thesis=False):
     """Initialize a figure for plotting pairwise velocities."""
-    fig, axes = plt.subplots(3, 2, figsize=(9.5, 11.), dpi=300, sharex=True,
+
+    if thesis:
+        width = 6.375
+        length = 7.
+
+    else:
+        width = 9.5
+        length = 11.
+
+    fig, axes = plt.subplots(3, 2, figsize=(width, length), dpi=300, sharex=True,
                              sharey=True)
+
     for a in axes:
         for ax in a:
             ax.axhline(y=0., linestyle="-", color="k")
@@ -252,7 +262,7 @@ def plot_vp(vp_path, label, color="C0", N_bins=80, marker=".", linestyle="-"):
                  label=label, marker=marker, linestyle=linestyle)
 
 
-def plot_vp_paper(vp_path, label, axes, m, n, color="C0", N_bins=80,
+def plot_vp_paper(vp_path, axes, m, n, color="C0", label=None, N_bins=80,
                   marker=".", linestyle="-"):
     """
     Plot pairwise velocities stored in a data file with errorbars.
@@ -313,10 +323,16 @@ def plot_static_paper(z, cosmo_params, axes):
     H_seps = np.logspace(np.log10(0.01), np.log10(10.), 200)
     H = H_z(z, cosmo_params[0], (cosmo_params[1] + cosmo_params[2]) /
             (cosmo_params[0] / 100.)**2.)
+    include_label = True
     for a in axes:
         for ax in a:
-            ax.plot(H_seps, -H*H_seps / (cosmo_params[0] / 100.), color="k",
-                    label="Static solution")
+            if include_label:
+                ax.plot(H_seps, -H*H_seps / (cosmo_params[0] / 100.), color="k",
+                        label="Static solution")
+                include_label = False
+
+            else:
+                ax.plot(H_seps, -H*H_seps / (cosmo_params[0] / 100.), color="k")
 
 
 def plot_lin_pred(z, cosmo_params):
@@ -349,11 +365,16 @@ def plot_lin_pred_paper(z, cosmo_params, axes):
     vp_lin_seps = np.logspace(np.log10(1.), np.log10(100.), 40)
     vp_lin = vp_lin_pred(vp_lin_seps, z, cosmo_params[0], cosmo_params[1],
                          cosmo_params[2], cosmo_params[3], cosmo_params[4])
+    include_label = True
     for a in axes:
         for ax in a:
-            ax.plot(vp_lin_seps, vp_lin, color="k", linestyle="--",
-                    label="Linear theory prediction")
+            if include_label:
+                ax.plot(vp_lin_seps, vp_lin, color="k", linestyle="--",
+                        label="Linear theory prediction")
+                include_label = False
 
+            else:
+                ax.plot(vp_lin_seps, vp_lin, color="k", linestyle="--")
 
 def pairwise_vel_plot(vp_paths, z, cosmo_params, output_path, static=True,
                       lin_pred=True):

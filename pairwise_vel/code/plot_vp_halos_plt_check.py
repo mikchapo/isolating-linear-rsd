@@ -8,6 +8,7 @@ import numpy as np
 from vp_plot_funcs import H_z, vp_lin_pred, plot_static, plot_lin_pred
 
 
+fill_types = ["v-tot", "v-lin", "v-nl"]
 cosmo_params = np.loadtxt("/home/mj3chapm/scratch/abacus/"
                           "AbacusCosmos_1100box_products/"
                           "AbacusCosmos_1100box_planck_products/"

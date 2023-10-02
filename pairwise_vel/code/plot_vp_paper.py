@@ -1,5 +1,5 @@
 # Plot halo pairwise velocity as a function of separation for paper
-# v0.1.1, 2022-09-19 - Updated to be single figure, proportioned for paper
+# v0.1.2, 2023-06-08 - Added option for thesis
 
 # Imports
 import matplotlib.pyplot as plt
@@ -8,6 +8,7 @@ import numpy as np
 from vp_plot_funcs import *
 
 
+thesis = False
 simname = "AbacusCosmos_1100box_planck"
 boxid = "00-0"
 single_path_root = ("/home/mj3chapm/scratch/abacus/{}_products/{}_{}_products/"
@@ -28,7 +29,7 @@ log_dsep = np.log10(bin_edges[1]) - np.log10(bin_edges[0])
 bin_centres = np.power(10., (np.log10(bin_edges[:-1]) + log_dsep / 2.))
 mass_bin_lims = np.arange(12., 15.5, 0.5)
 
-fig, axes = initialize_paper_plot()
+fig, axes = initialize_paper_plot(thesis=thesis)
 plot_static_paper(z, cosmo_params, axes)
 for i in range(mass_bin_lims.size-1):
     m = i // 2
@@ -43,9 +44,21 @@ for i in range(mass_bin_lims.size-1):
                    ".dat".format(path_root, component["name"],
                                  mass_bin_lims[i],
                                  mass_bin_lims[i+1]))
-        plot_vp_paper(vp_path, component["label"], axes, m, n,
-                      color="C0", marker="",
-                      linestyle=component["ls"])
+        if thesis and i==0:
+            if j==0:
+                plot_vp_paper(vp_path, axes, m, n,
+                              label="Unsmoothed", color="C0", marker="",
+                              linestyle=component["ls"])
+
+            else:
+                plot_vp_paper(vp_path, axes, m, n,
+                              color="C0", marker="",
+                              linestyle=component["ls"])
+
+        else:
+            plot_vp_paper(vp_path, axes, m, n,
+                          label=component["label"], color="C0", marker="",
+                          linestyle=component["ls"])
 
     for j, component in enumerate(vel_components[1:]):
         # vp_path = ("{}/z0.700/pairwise_vel/"
@@ -57,18 +70,34 @@ for i in range(mass_bin_lims.size-1):
                    ".dat".format(path_root, component["name"],
                                  mass_bin_lims[i],
                                  mass_bin_lims[i+1]))
-        plot_vp_paper(vp_path, "Smoothed {}".format(component["label"]), axes,
-                      m, n, color="C1", marker="",
-                      linestyle=component["ls"])
+        if thesis:
+            plot_vp_paper(vp_path, axes, m, n,
+                          color="C1", marker="",
+                          linestyle=component["ls"])
 
-    axes[m, n].set_title("{:.2f}-{:.2f} Halo Mass".format(mass_bin_lims[i],
-                                                          mass_bin_lims[i+1]))
+        else:
+            plot_vp_paper(vp_path, axes, m, n,
+                          label="Smoothed {}".format(component["label"]), color="C1", marker="",
+                          linestyle=component["ls"])
 
-axes[0, 0].legend()
-output_path = ("../output/plots/halo_vp_paper.jpg")
+    axes[m, n].set_title(r"$10^{" + "{:.1f}".format(mass_bin_lims[i]) + "}-10^{" + "{:.1f}".format(mass_bin_lims[i+1]) + "}\,M_{\odot}/h$")
+
 
 plot_lin_pred_paper(z, cosmo_params, axes)
+
+if thesis:
+    axes[0, 0].errorbar([1, 2], [1000, 2000], yerr=[1, 1], color="C1", linestyle="-", label="Smoothed")
+    axes[0, 1].legend()
+
+axes[0, 0].legend()
+
+if thesis:
+    output_path = ("../output/plots/halo_vp_thesis.png")
+else:
+    output_path = ("../output/plots/halo_vp_paper.png")
+
 finish_paper_plot(output_path)
 
 # Change Log
+# v0.1.1, 2022-09-19 - Updated to be single figure, proportioned for paper
 # v0.1.0, 2022-08-09 - Code started, copied from plot_vp_check_halo_type.py
