@@ -1,0 +1,56 @@
+output_root: /home/mj3chapm/P2/fit/output/plots/analyze_chains/smoothed_emulator/uchuu_sham_scales
+ignore_rows: 20000
+z_data: 0.7
+paths:
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/uchuu_sham_large_only_v2/uchuu_sham_large_only_v2
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/uchuu_sham_intermediate_only_v2/uchuu_sham_intermediate_only_v2
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/uchuu_sham_rm_small_v2/uchuu_sham_rm_small_v2
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/uchuu_sham_rm_large_v2/uchuu_sham_rm_large_v2
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/uchuu_sham_v2/uchuu_sham_v2
+legend_labels:
+  - $7-60\,h^{-1}$ Mpc 
+  - $0.8-7\,h^{-1}$ Mpc 
+  - $0.8-60\,h^{-1}$ Mpc 
+  - $0.1-7\,h^{-1}$ Mpc 
+  - $0.1-60\,h^{-1}$ Mpc (Baseline)
+colour_type: default
+params:
+  - omegam
+  - ombh2
+  - sigma8
+  - H0
+  - ns
+  - logM_sat
+  - alpha
+  - logM_cut
+  - sigma_logM
+  - fmax
+  - v_bc
+  - v_bs
+  - c_vir
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+params_reduced:
+  - omegam
+  - sigma8
+  - sigma_logM
+  - fmax
+  - v_bc
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+fsig8_plot: True
+gamma_l_plot: True
+gammas_plot: True
+reduced_tp: True
+full_tp: True
+baseline_index: 4
+# reduced_fig_width: 4.75
+reduced_fig_width: 9.5
+# fig_width: 9.5
+fig_width: 24.
+# param_limits:
+#   logM_sat:
+#     - 14.1
+#     - 15.1

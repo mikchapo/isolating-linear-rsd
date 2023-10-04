@@ -1,0 +1,62 @@
+likelihood:
+  emulator_likelihood:
+    external: emulator_likelihood_func
+    output_params:
+    - sigma8_aem
+    - fsigma8_wcdm
+    - fsigma8_comp
+    - fsigma8_meas
+    speed: 4
+packages_path: ../packages
+params:
+  H0:
+    latex: H_0
+    max: 100
+    min: 20
+  alpha:
+    latex: \alpha
+  c_vir:
+    latex: c_{vir}
+  fmax:
+    latex: f_{max}
+  fsigma8_comp:
+    latex: 'f\sigma_8'
+  fsigma8_meas:
+    latex: \gamma_f f\sigma_8
+  fsigma8_wcdm:
+    latex: '{f\sigma_8}_{wCDM}'
+  gamma_l:
+    latex: \gamma_l
+  gamma_n:
+    latex: \gamma_n
+  logM_cut:
+    latex: logM_{cut}
+  logM_sat:
+    latex: logM_{sat}
+  ns:
+    latex: n_\mathrm{s}
+  ombh2:
+    latex: \Omega_\mathrm{b} h^2
+  omegam:
+    latex: \Omega_\mathrm{m}
+  sigma8:
+    latex: \sigma_8
+  sigma8_aem:
+    latex: '{\sigma_8}_{aem}'
+  sigma8_free:
+    latex: \sigma_{8,a}
+  sigma_logM:
+    latex: \sigma_{logM}
+  v_bc:
+    latex: v_{bc}
+  v_bs:
+    latex: v_{bs}
+  w:
+    latex: w_\mathrm{DE}
+    value: -1.0
+sampler:
+  mcmc:
+    learn_proposal: true
+    max_tries: 1000000
+    oversample_power: 0.4
+    proposal_scale: 1.0

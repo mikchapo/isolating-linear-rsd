@@ -1,0 +1,48 @@
+omegam:
+  max: 0.375
+  min: 0.225
+ombh2: 
+  max: 0.1
+  min: 0.005
+sigma8: 
+  max: 1.1
+  min: 0.55
+H0: 
+  max: 78
+  min: 58
+ns: 
+  max: 1.1
+  min: 0.9
+w: 
+  max: -0.5
+  min: -1.50
+logM_sat: 
+  max: 16.2
+  min: 13.8
+alpha: 
+  max: 2.2
+  min: 0.1
+logM_cut: 
+  max: 14.
+  min: 11.5
+sigma_logM: 
+  max: 1.7
+  min: 0.08
+v_bc: 
+  max: 0.85
+  min: 0.
+v_bs: 
+  max: 2.2
+  min: 0.1
+c_vir: 
+  max: 2.2
+  min: 0.1
+fmax:
+  max: 1.0
+  min: 0.1
+gamma_l:
+  max: 2.0
+  min: 0.1
+gamma_n: 
+  max: 2.0
+  min: 0.1

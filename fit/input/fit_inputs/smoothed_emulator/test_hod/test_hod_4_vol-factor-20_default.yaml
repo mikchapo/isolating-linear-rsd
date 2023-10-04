@@ -1,0 +1,22 @@
+emulator: smoothed_emulator
+chain_dir: /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/test_clustering/test_hod_4_vol-factor-20_default/test_hod_4_vol-factor-20_default
+measurements:
+  - mono
+  - quad
+  - wp
+scales:
+  - small
+  - intermediate
+  - large
+data_path: /home/mj3chapm/P2/fit/data/test_clustering/CF_cosmo_0_HOD_4_mean_dv.dat
+cov_mat_path: /home/mj3chapm/P2/fit/data/test_clustering/CF_cosmo_0_HOD_4_mean_vol-factor-20_abacus_smooth-vel_cov_mat.dat
+z_data: 0.7
+s8_treatment: no_scale
+training_prior: True
+include_ap: False
+cobaya_input_file: /home/mj3chapm/P2/fit/input/cobaya_inputs/emulator_only.yaml
+ref_input_file: /home/mj3chapm/P2/fit/input/ref_inputs/default.yaml
+prior_input_file: /home/mj3chapm/P2/fit/input/prior_inputs/default.yaml
+fit_cov_mat: /home/mj3chapm/P2/fit/data/eboss_ao_tp_v2.covmat
+resume: False
+equal_gammas: False

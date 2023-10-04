@@ -1,0 +1,22 @@
+emulator: smoothed_emulator
+chain_dir: /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/constraint_test/std2_gl_low/std2_gl_low
+measurements:
+  - mono
+  - quad
+  - wp
+scales:
+  - small
+  - intermediate
+  - large
+data_path: /home/mj3chapm/P2/fit/data/dv_eBOSS_LRG_comb_v7_2_pip_ang_ab.dat
+cov_mat_path: /home/mj3chapm/P2/fit/data/eboss_jk_200_pip_ang_jk-corr_diag_abacus_smooth-vel_cov_mat.dat
+z_data: 0.7368961822796876
+s8_treatment: scale
+training_prior: True
+include_ap: True
+cobaya_input_file: /home/mj3chapm/P2/fit/input/cobaya_inputs/emulator_only.yaml
+ref_input_file: /home/mj3chapm/P2/fit/input/ref_inputs/constraint_test/std2_gl_low.yaml
+prior_input_file: /home/mj3chapm/P2/fit/input/prior_inputs/default.yaml
+fit_cov_mat: /home/mj3chapm/P2/fit/data/eboss_ao_tp_v2.covmat
+resume: False
+equal_gammas: False

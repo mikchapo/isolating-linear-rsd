@@ -1,0 +1,54 @@
+output_root: /home/mj3chapm/P2/fit/output/plots/analyze_chains/smoothed_emulator/jk-corr/eboss_scales_defence
+ignore_rows: 40000
+z_data: 0.7368961822796876
+paths:
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/jk-corr/eboss_large_only/eboss_large_only
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/jk-corr/eboss_rm_small/eboss_rm_small
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/jk-corr/eboss_rm_large/eboss_rm_large
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/jk-corr/eboss_fiducial/eboss_fiducial
+legend_labels:
+  - $7-60\,h^{-1}$ Mpc 
+  - $0.8-60\,h^{-1}$ Mpc 
+  - $0.1-7\,h^{-1}$ Mpc 
+  - $0.1-60\,h^{-1}$ Mpc
+colour_type: default
+params:
+  - omegam
+  - ombh2
+  - sigma8
+  - H0
+  - ns
+  - logM_sat
+  - alpha
+  - logM_cut
+  - sigma_logM
+  - fmax
+  - v_bc
+  - v_bs
+  - c_vir
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+params_reduced:
+  - omegam
+  - sigma8
+  - sigma_logM
+  - fmax
+  - v_bc
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+fsig8_plot: True
+gamma_l_plot: False
+gammas_plot: False
+reduced_tp: False
+full_tp: False
+baseline_index: 3
+# reduced_fig_width: 3.175
+reduced_fig_width: 4.75
+# fig_width: 9.5
+fig_width: 24.
+# param_limits:
+#   logM_sat:
+#     - 14.1
+#     - 15.1

@@ -1,0 +1,21 @@
+chain_dir: /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/uchuu_sham/uchuu_sham
+measurements:
+  - mono
+  - quad
+  - wp
+scales:
+  - small
+  - intermediate
+  - large
+data_path: /home/mj3chapm/P2/fit/data/uchuu_z0.70_n1_red_dv.dat
+cov_mat_path: /home/mj3chapm/P2/fit/data/uchuu_z0.70_n1_red_abacus_cov_mat.dat
+z_data: 0.7
+s8_treatment: no_scale
+training_prior: True
+include_ap: False
+cobaya_input_file: /home/mj3chapm/P2/fit/input/cobaya_inputs/aemulus_only.yaml
+ref_input_file: /home/mj3chapm/P2/fit/input/ref_inputs/uchuu_z07_n1_jpa_no_scale_v1.yaml
+prior_input_file: /home/mj3chapm/P2/fit/input/prior_inputs/default.yaml
+fit_cov_mat: /home/mj3chapm/P2/fit/data/uchuu_z07_n1_jpa_no_scale_v1.covmat
+resume: False
+equal_gammas: False

@@ -1,0 +1,96 @@
+H0:
+  proposal: 0.4125979693372381
+  ref:
+    dist: norm
+    loc: 67.04044473232578
+    scale: 0.8251959386744762
+alpha:
+  proposal: 0.156021450306838
+  ref:
+    dist: norm
+    loc: 0.4915334960331458
+    scale: 0.312042900613676
+c_vir:
+  proposal: 0.3252549936491733
+  ref:
+    dist: norm
+    loc: 0.869049519523694
+    scale: 0.6505099872983466
+fmax:
+  proposal: 0.05
+  ref:
+    dist: norm
+    loc: 1.0
+    scale: 0.1
+gamma_l:
+  proposal: 0.03233301754813744
+  ref:
+    dist: norm
+    loc: 1.0
+    scale: 0.06466603509627487
+gamma_n:
+  proposal: 0.03233301754813744
+  ref:
+    dist: norm
+    loc: 1.0
+    scale: 0.06466603509627487
+logM_cut:
+  proposal: 1.1552155841151588
+  ref:
+    dist: norm
+    loc: 11.198074757944752
+    scale: 2.3104311682303176
+logM_sat:
+  proposal: 0.3137801213523134
+  ref:
+    dist: norm
+    loc: 15.097900818459479
+    scale: 0.6275602427046268
+ns:
+  proposal: 0.00323934079908123
+  ref:
+    dist: norm
+    loc: 0.9614291541487965
+    scale: 0.00647868159816246
+ombh2:
+  proposal: 0.00012616946742916084
+  ref:
+    dist: norm
+    loc: 0.022322746971285667
+    scale: 0.0002523389348583217
+omegam:
+  proposal: 0.005752585385828716
+  ref:
+    dist: norm
+    loc: 0.3197367548353993
+    scale: 0.011505170771657433
+sigma8:
+  proposal: 0.005515307635101988
+  ref:
+    dist: norm
+    loc: 0.8127671676292485
+    scale: 0.011030615270203976
+sigma8_aem:
+  proposal: 0.005515307635101988
+  ref:
+    dist: norm
+    loc: 0.8127671676292485
+    scale: 0.011030615270203976
+sigma_logM:
+  proposal: 0.024946589413815588
+  ref:
+    dist: norm
+    loc: 1.0467319201047611
+    scale: 0.049893178827631175
+v_bc:
+  proposal: 0.05971366822674226
+  ref:
+    dist: norm
+    loc: 0.0807964503801649
+    scale: 0.11942733645348452
+v_bs:
+  proposal: 0.06914956489934675
+  ref:
+    dist: norm
+    loc: 0.9954123432751755
+    scale: 0.1382991297986935

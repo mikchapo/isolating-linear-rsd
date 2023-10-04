@@ -1,0 +1,51 @@
+output_root: /home/mj3chapm/P2/fit/output/plots/analyze_chains/eboss_probes
+ignore_rows: 20000
+z_data: 0.7368961822796876
+paths:
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/eboss_mono+wp/eboss_mono+wp
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/eboss_mono+quad/eboss_mono+quad
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/eboss_fiducial/eboss_fiducial
+legend_labels:
+  - $\xi_0 + w_p$ 
+  - $\xi_0 + \xi_2$ 
+  - $\xi_0 + \xi_2 + w_p$ (Baseline)
+colour_type: default
+params:
+  - omegam
+  - ombh2
+  - sigma8
+  - H0
+  - ns
+  - logM_sat
+  - alpha
+  - logM_cut
+  - sigma_logM
+  - fmax
+  - v_bc
+  - v_bs
+  - c_vir
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+params_reduced:
+  - omegam
+  - sigma8
+  - sigma_logM
+  - fmax
+  - v_bc
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+fsig8_plot: True
+gamma_l_plot: True
+gammas_plot: True
+reduced_tp: True
+full_tp: False
+baseline_index: 2
+reduced_fig_width: 4.75
+# fig_width: 9.5
+fig_width: 24.
+# param_limits:
+#   logM_sat:
+#     - 14.1
+#     - 15.1

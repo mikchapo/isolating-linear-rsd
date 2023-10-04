@@ -1,0 +1,49 @@
+output_root: /home/mj3chapm/P2/fit/output/plots/analyze_chains/smoothed_emulator/test_hod/test_hod_2_vol-factor-20_default
+ignore_rows: 30000
+z_data: 0.7
+paths:
+  - /home/mj3chapm/projects/rrg-wperciva/mj3chapm/P2/chains/smoothed_emulator/test_clustering/test_hod_2_vol-factor-20_default/test_hod_2_vol-factor-20_default
+legend_labels:
+  - Baseline, $0.1-60\,h^{-1}$ Mpc
+colour_type: default
+params:
+  - omegam
+  - ombh2
+  - sigma8
+  - H0
+  - ns
+  - logM_sat
+  - alpha
+  - logM_cut
+  - sigma_logM
+  - fmax
+  - v_bc
+  - v_bs
+  - c_vir
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+params_reduced:
+  - omegam
+  - sigma8
+  - sigma_logM
+  - fmax
+  - v_bc
+  - gamma_n
+  - gamma_l
+  - fsigma8_comp
+fsig8_plot: False
+gammas_plot: False
+gamma_l_plot: False
+reduced_tp: True
+full_tp: True
+baseline_index: 0
+# reduced_fig_width: 4.75
+reduced_fig_width: 9.5
+#fig_width: 9.5
+fig_width: 24.
+#param_limits:
+#  logM_sat:
+#    - 14.1
+#    - 14.8
+test_hod: 2
