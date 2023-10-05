@@ -1,0 +1,5 @@
+for i in 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 planck
+  do
+  dest_dir=~/projects/rrg-wperciva/abacus_share/AbacusCosmos_1100box_rockstar_halos_z0.700_smoothed_lin_vel/
+  cp ~/scratch/abacus/AbacusCosmos_1100box_products/AbacusCosmos_1100box_${i}_products/AbacusCosmos_1100box_${i}_rockstar_halos/z0.700/halo_lin_vel_1100_tophat_5.0_smoothed_v3.dat ${dest_dir}/halo_smoothed_lin_vel_box_${i}_v3.dat
+  done
