@@ -452,4 +452,4 @@ for k in range(N_reg+2):
     print("Finished %i" % k)
 
 jk_corr_funcs_test(output_root, dv_output, "eBOSS LRG v7_2 PIP+ANG", references=["../data/dv_eBOSS_LRG_comb_v7_2_pip_ang_ab.dat"],
-                   reference_labels=["Reference"], N_reg=N_reg, include_full=True, output_path="../output/jk_test_")
+                   reference_labels=["Reference"], N_reg=N_reg, include_full=True, output_path="../output/plots/jk_test_")
