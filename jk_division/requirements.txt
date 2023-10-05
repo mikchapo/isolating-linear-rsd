@@ -1,0 +1,4 @@
+astropy==5.1+computecanada
+pyerfa==2.0.0.1+computecanada
+PyYAML==6.0+computecanada
+seaborn==0.12.1+computecanada
